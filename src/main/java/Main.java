@@ -1,3 +1,4 @@
+import Discord.RPC;
 import fr.litarvan.openauth.Authenticator;
 import fr.litarvan.openauth.microsoft.MicrosoftAuthResult;
 import fr.litarvan.openauth.microsoft.MicrosoftAuthenticationException;
@@ -25,6 +26,11 @@ public class Main extends JFrame {
         frame.setSize(500, 650);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setLayout(new GridLayout(3, 2));
+        frame.setResizable(false);
+
+        //Set Properties for Email and Passwort Field
+
+
 
         //Add the Login Button
 
@@ -128,6 +134,14 @@ public class Main extends JFrame {
                             //Launch the Game
 
                             launcher.launch();
+
+                            //Wait 3 Seconds
+
+                            Thread.sleep(3000);
+
+                            //Close the Launcher hopefully
+
+                            System.exit(0);
                         }
                     } catch (Exception ex) {
                         ex.printStackTrace();
@@ -144,6 +158,8 @@ public class Main extends JFrame {
         frame.add(passwordField);
         frame.add(new JLabel()); // Placeholder
         frame.add(loginButton);
+
+        RPC.instance().update("Launcher", "Denkt daran das Speil zu starten.", "", "");
 
         frame.setVisible(true);
     }

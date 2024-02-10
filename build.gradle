@@ -1,0 +1,23 @@
+plugins {
+    id 'java'
+}
+
+group = 'de.bensonheimer'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    maven { url 'https://jitpack.io' }
+    maven { url 'https://litarvan.github.io/maven' }
+}
+
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.9.1')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    implementation 'com.github.h12z:MinecraftLauncherLibrary:1.1.2'
+    implementation 'fr.litarvan:openauth:1.1.3'
+}
+
+test {
+    useJUnitPlatform()
+}

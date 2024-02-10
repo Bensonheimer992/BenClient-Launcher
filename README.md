@@ -1,4 +1,4 @@
-#Minecraft Launcher
+Minecraft Launcher
 
 Dieser Minecraft Launcher wurde mit Hilfe der LauncherLibrary von h12z entwickelt. Der Launcher ermöglicht es Benutzern, sich mit ihren Microsoft-Konten anzumelden und das Spiel zu starten. Darüber hinaus kann der Launcher automatisch die neueste Version des Spiels herunterladen, falls sie nicht vorhanden ist.
 Funktionen
